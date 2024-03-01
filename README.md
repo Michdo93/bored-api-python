@@ -1,15 +1,7 @@
 # bored-api-python
 A Python script accessing the Bored API. Runnable under Python 2.7 and Python 3.x.
 
-I provide two versions. With the `translate` Module and without.
-
-You can use the Azure AI Translator from Microsoft, Translate from MyMemory or LibreTranslate to translate in any language. But you may have to register with one of these providers in order to use the translation. MyMemory is used by default and is the free version. Better results can be achieved by registering.
-
-Bored API otherwise only returns English results by default.
-
-The programme code even contains fixed translations for the categories in German, English, French and Spanish. This is not translated by the Translator because it would otherwise take longer for the result to be returned. Nothing changes in the categories and each translation could otherwise lead to different results.
-
-Further Informations to the `translate` Module you can finde [here](https://translate-python.readthedocs.io/en/latest/index.html) and about the Bored API you can find [here](http://www.boredapi.com/).
+The tranlation file uses an `Google Translator` endpoint for translation.
 
 
 ## Pre-Installation
@@ -24,20 +16,6 @@ or Python 3.x:
 
 ```
 python3 -m pip install requests
-```
-
-And if you want to use it with the `translate` Module you can install:
-
-```
-python -m pip install requests
-python -m pip install translate # currently no working version for Python 2.7
-```
-
-or Python 3.x:
-
-```
-python3 -m pip install requests
-python3 -m pip install translate
 ```
 
 ## Usage
@@ -71,7 +49,16 @@ python bored_api_translate.py
 As example you will receive:
 
 ```
-DIFFERENT ERRORS! Beacuse currently not working.
+Gehen Sie mit ein paar Freunden auf ein Musikfestival
+Lernen Sie eine neue Programmiersprache
+Lernen Sie Eislaufen oder Rollschuhlaufen
+Treffen Sie sich bei einem Mittagessen mit einem Freund
+Repariere etwas, das in deinem Haus kaputt ist
+Sammle Müll in deinem Lieblingspark ein
+Machen Sie selbstgemachtes Eis
+Beginnen Sie mit einem Buch, zu dessen Lektüre Sie noch nie gekommen sind
+Gründe eine Band
+Konfigurieren Sie die Zwei-Faktor-Authentifizierung für Ihre Konten
 ```
 
-What you need to bear in mind: Every request to Bored API returns different results. You can see that the results for English and German have been completely regenerated here. Since the `translate` module is already installed, if you want to have the same result translated in several languages, you could rewrite the programme and perform several translations in the main method. For me, this is not desirable as I want to generate random results each time.
+What you need to bear in mind: Every request to Bored API returns different results. You can see that the results for English and German have been completely regenerated here.
